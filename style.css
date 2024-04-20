@@ -68,6 +68,10 @@ nav {
   justify-content: space-around;
 }
 
+#contactButton{
+  margin-top: 1rem;
+}
+
 .main {
   width: 100%;
   height: 94vh;
@@ -119,7 +123,7 @@ nav {
   line-height: 1;
   cursor: pointer;
   text-align: center;
-  transition: background 250ms ease-in-out, transform 150ms ease;
+  transition: background 150ms ease-in-out, transform 100ms ease;
   -webkit-appearance: none;
   -moz-appearance: none;
 }
@@ -173,7 +177,7 @@ nav {
 }
 
 .experience-section {
-  background-color: #F7F8FA;
+  background-color: #F3F4F6;
   display: flex;
   justify-content: space-around;
   flex-direction: column;
@@ -203,6 +207,7 @@ nav {
   text-align: center;
   margin: 20px;
 }
+
 
 .card-title {
   grid-area: title;
@@ -273,6 +278,7 @@ nav {
   width: 100%;
   text-align: left;
 }
+
 
 .contact-section {
   background-color: #E4E6D9;
@@ -650,4 +656,21 @@ footer {
 
 .toggle .line3 {
   transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Base styles for the iframe */
+iframe {
+  width: 600px; /* Default width for desktop */
+  height: 450px; /* Default height for desktop */
+  border: 0; /* Removes the border */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Horizontal, vertical offset, blur radius, and color */
+  border-radius: 8px; /* Optional: Rounded corners for a softer look */
+}
+
+/* Responsive styles using media query */
+@media (max-width: 768px) { /* Adjusts for devices with width 768px or less */
+  iframe {
+      width: 100%; /* Takes full width of the screen on mobile */
+      height: 300px; /* Adjust height as needed for mobile */
+  }
 }
