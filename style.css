@@ -84,7 +84,7 @@ nav {
 }
 
 .intro-content {
-  color: #253528;
+  color: #253528; 
   height: 50vh;
   width: 80%;
   height: 30vh;
@@ -92,6 +92,7 @@ nav {
   flex-direction: column;
   justify-content: space-around;
   align-items: left;
+  padding: 5rem
 }
 
 .intro-content h2 {
