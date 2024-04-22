@@ -72,6 +72,9 @@ nav {
   margin-top: 1rem;
 }
 
+#address{
+  margin-bottom: 2rem;
+}
 .main {
   width: 100%;
   height: 94vh;
