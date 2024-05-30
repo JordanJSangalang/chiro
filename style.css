@@ -70,6 +70,7 @@ nav {
 
 #contactButton{
   margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 #address{
@@ -114,9 +115,10 @@ nav {
 
 .btn {
   display: inline-block;
+  align-items: center;
   border: none;
-  padding: 0.75rem 2rem;
-  margin: 0rem 2rem 0rem 0rem;
+  padding: 0.75rem 2.5rem;
+  margin: 0rem 2rem 1rem 0rem;
   border: 1px solid #253528;
   text-decoration: none;
   background: transparent;
@@ -309,6 +311,12 @@ nav {
 }
 
 .contact-info p {
+  color: #253528;
+  font-size: 1.2rem;
+  margin: 0.5rem;
+}
+
+.contact-info a {
   color: #253528;
   font-size: 1.2rem;
   margin: 0.5rem;

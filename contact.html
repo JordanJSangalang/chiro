@@ -22,7 +22,7 @@
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html">Forms</a></li>
       </ul>
 
       <div class="burger">
@@ -32,7 +32,12 @@
       </div>
     </nav>
     <section class="contact-section contact-section-page">
-      <h3>Contact Us</h3>
+      <h3>Forms</h3>
+      <button class="btn contact" id="contactButton1">Download New Patient Form</button>
+      <button class="btn contact" id="contactButton2">Download PI Paperwork</button>
+
+
+      <!-- <h3>Contact Us</h3>
       <div class="contact-info-container">
       <div class="contact-info">
         <img class="phone icon" src="new-phone.png" alt="phone icon" />
@@ -48,7 +53,7 @@
       </div>
     </div>
     </section>
-    <!-- <section class="main-contact">
+     <section class="main-contact">
       <h3 class="contactH3">Message Me</h3>
       <p></p>
       <form
@@ -66,12 +71,73 @@
       </form> -->
     </section>
 
-    <footer class='contact-footer'>
-    
+    <footer>
+      <section class="contact-section">
+        <h3>Contact Us</h3>
+        <div class="contact-info-container">
+          <div class="contact-info">
+            <img class="phone icon" src="new-phone.png" alt="phone icon" />
+            <p class="phone-number">Phone: (317) 898-5800</p>
+          </div>
+          <div class="contact-info">
+            <img
+              class="email icon"
+              src="new-email.png"
+              alt="email icon"
+            />
+            <p class="email">Email: chiro1st@sbcglobal.net</p>
+          </div>
+          <div class="contact-info">
+            <img class="phone icon" src="pin-8-64.png" alt="phone icon" />
+            <p class="phone-number">1020 E 10th St, Indianapolis, IN 46229</p>
+          </div>
+        </div>
+      </section>
       <div class="copyright">
         <p>Copyright &copy; Jordan Sangalang 2024</p>
       </div>
     </footer>
     <script src="script.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+          console.log('DOM fully loaded and parsed');
+      
+          var button1 = document.getElementById('contactButton1');
+          var button2 = document.getElementById('contactButton2');
+      
+          console.log('Button 1:', button1);
+          console.log('Button 2:', button2);
+      
+          if (button1) {
+              console.log('Found button 1');
+              button1.addEventListener('click', function() {
+                  console.log('Button 1 clicked');
+                  downloadPDF('new-patient-form.pdf', 'new-patient-form.pdf');
+              });
+          } else {
+              console.error('Button 1 not found');
+          }
+      
+          if (button2) {
+              console.log('Found button 2');
+              button2.addEventListener('click', function() {
+                  console.log('Button 2 clicked');
+                  downloadPDF('pi-paperwork.pdf', 'pi-paperwork.pdf');
+              });
+          } else {
+              console.error('Button 2 not found');
+          }
+      });
+      
+      function downloadPDF(pdfPath, fileName) {
+          console.log(`Initiating download for: ${pdfPath}`);
+          var link = document.createElement('a');
+          link.href = pdfPath;
+          link.download = fileName;
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+      }
+      </script>
   </body>
 </html>

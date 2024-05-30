@@ -56,3 +56,43 @@ document.getElementById("msg-btn1").addEventListener("click", function () {
     clearFormFields();
   }, 1000);
 });
+
+
+// forms button logic
+
+document.addEventListener('DOMContentLoaded', function() {
+  console.log('DOM fully loaded and parsed');
+
+  var button1 = document.getElementById('contactButton1');
+  var button2 = document.getElementById('contactButton2');
+
+  if (button1) {
+      console.log('Found button 1');
+      button1.addEventListener('click', function() {
+          console.log('Button 1 clicked');
+          downloadPDF('new-patient-form.pdf', 'new-patient-form.pdf');
+      });
+  } else {
+      console.error('Button 1 not found');
+  }
+
+  if (button2) {
+      console.log('Found button 2');
+      button2.addEventListener('click', function() {
+          console.log('Button 2 clicked');
+          downloadPDF('pi-paperwork.pdf', 'pi-paperwork.pdf');
+      });
+  } else {
+      console.error('Button 2 not found');
+  }
+});
+
+function downloadPDF(pdfPath, fileName) {
+  console.log(`Initiating download for: ${pdfPath}`);
+  var link = document.createElement('a');
+  link.href = pdfPath;
+  link.download = fileName;
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
